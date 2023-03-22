@@ -1,0 +1,121 @@
+/* Header styles for screens wider than 768px */
+header {
+  background-color: #282c34;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  padding: 10px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 8vmin;
+  pointer-events: none;
+}
+
+.site-name {
+  margin-left: 10px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin: 0 10px;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.menu li a:hover {
+  text-decoration: underline;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: white;
+  color: #282c34;
+}
+
+/* Header styles for screens smaller than 768px */
+@media only screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .logo-container {
+    margin-bottom: 10px;
+  }
+
+  .logo {
+    height: 6vmin;
+  }
+
+  .site-name {
+    margin-left: 0;
+    font-size: 1.5rem;
+  }
+
+  .menu {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu li {
+    margin: 10px 0;
+  }
+
+  .menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  .menu li a:hover {
+    text-decoration: none;
+  }
+  
+  button {
+    font-size: 1.2rem;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: white;
+    color: #282c34;
+  }
+}

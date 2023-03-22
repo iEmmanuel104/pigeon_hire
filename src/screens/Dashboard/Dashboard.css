@@ -1,0 +1,124 @@
+.container {
+  margin-top: 50px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.card-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  width: 300px;
+  height: 250px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+
+.card-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: #1abc9c;
+}
+
+.card-title {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.card-text {
+  font-size: 20px;
+  font-weight: 500;
+  color: #555;
+}
+
+
+/*  LEADERBOARD STYLES  */
+/* Add some padding and set a background color */
+.records-container {
+  padding: 20px;
+  background-color: #f5f5f5;
+  /* center items */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Style the title and subtitle */
+.records {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.records-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Style the charts */
+.records-chart {
+  margin-bottom: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 70%;
+}
+
+/* Style the number displayed in the first chart */
+.records-number {
+  font-size: 64px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Style the legend in the bar chart */
+.recharts-legend-wrapper {
+  margin-top: 20px;
+}
+
+/* Style the pie chart */
+.recharts-text.recharts-pie-label-text {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Style the cells in the pie chart */
+.recharts-sector {
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.recharts-sector :hover {
+  filter: brightness(90%);
+}
+
+/* Style the tooltip */
+.recharts-tooltip {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.1);
+  padding: 10px;
+  font-size: 16px;
+}
