@@ -1,0 +1,124 @@
+.sidebar-menu {
+    /* background-color: rgb(196, 255, 255); */
+    position: sticky;
+    top: 75px;
+    left: 0;
+    width: auto;
+    height: auto;
+    display: flex;
+    /* flex-shrink: 0; */
+    /* border-right:#f7f7f7 1px outset; */
+}
+
+.menu-list {
+  /* background-color: grey; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: top;
+  text-align: center;
+  list-style: none;
+  padding: 0 5px;
+  gap: 5px;
+  margin-top: 40px;
+  height: 100vh;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-view {
+  flex-grow: 5;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  margin-top: 40px;
+  padding: 0 8px;
+}
+
+.sidebar-menu .menu-list li {
+  display: block;
+  /* position: relative; */
+  padding: 20px;
+  width: 100%;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.sidebar-menu .menu-list li:hover,
+.sidebar-menu .menu-list .active {
+  background-color: #fff;
+  color: #181c32;
+  border-radius: 5px;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+
+.font-icon {
+  height: 30px;
+  font-size: 1rem;
+  color: #181c32;
+  align-self: auto;
+}
+
+.menu-list h2 {
+  padding-top: 10px;
+  font-size: 0.7rem;
+  color: #181c32;
+  text-align: center;
+}
+
+.results-view {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.result-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.result-data:hover {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.result-name {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.result-email {
+  font-size: 0.5rem;
+  color: #888;
+}
+
+.result-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.view-button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.3rem 0.7rem;
+  font-size: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.view-button:hover {
+  background-color: #388e3c;
+}
+
+.siderbar-modal {
+  background-color: blue;
+}
+

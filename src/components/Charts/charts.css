@@ -1,0 +1,54 @@
+
+.records-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Style the charts */
+.records-chart {
+  margin-bottom: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 50%;
+}
+
+/* Style the number displayed in the first chart */
+.records-number {
+  font-size: 64px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Style the legend in the bar chart */
+.recharts-legend-wrapper {
+  margin-top: 20px;
+}
+
+/* Style the pie chart */
+.recharts-text.recharts-pie-label-text {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Style the cells in the pie chart */
+.recharts-sector {
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.recharts-sector :hover {
+  filter: brightness(90%);
+}
+
+/* Style the tooltip */
+.recharts-tooltip {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.1);
+  padding: 10px;
+  font-size: 16px;
+}

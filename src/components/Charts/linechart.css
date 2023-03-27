@@ -1,0 +1,54 @@
+.records-chart {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.records-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.recharts-cartesian-axis-tick-value {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.recharts-legend-item-text {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.recharts-tooltip-label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.recharts-tooltip-item-value {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.recharts-tooltip-wrapper {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recharts-tooltip-cursor {
+  fill: #000000;
+}
+
+.recharts-line {
+  stroke-width: 2px;
+}
+
+@media only screen and (max-width: 768px) {
+  .records-chart {
+    width: 100%;
+  }
+}

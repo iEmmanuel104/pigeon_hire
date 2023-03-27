@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes, useLocation, Navigate } from 'r
 import Toastify from './components/Toastify';
 import ToastifyComponent from './context/ToastifyContext';
 import Header from './components/Header/Header';
+import Sidebar from './components/Sidebar/Sidebar';
 import Register from './screens/Auth/Register';
 import Login from './screens/Auth/Login';
 import Dashboard from './screens/Dashboard/Dashboard';
@@ -31,11 +32,13 @@ function App() {
   return (
 
     <ToastifyComponent>
-        <div style={{ position: "fixed", zIndex: "1000000" }}>
-          <Toastify />
-        </div>    
-        <Router>
+      <div style={{ position: "fixed", zIndex: "1000000" }}>
+        <Toastify />
+      </div>
+      <Router>
         <Header isAuthenticated={isAuthenticated} handleLogout={handleLogout} />
+        {/* <Sidebar isAuthenticated={isAuthenticated} /> */}
+        {isAuthenticated }
         <Routes>
           <Route path='/' element={<Register />} />
           <Route path='login' element={<Login handleLogin={handleLogin} />} />
@@ -48,7 +51,6 @@ function App() {
           ) : (
             <Route path='*' element={<Navigate to='/login' />} />
           )}
-
         </Routes>
       </Router>
     </ToastifyComponent>
@@ -56,3 +58,6 @@ function App() {
 }
 
 export default App;
+
+
+

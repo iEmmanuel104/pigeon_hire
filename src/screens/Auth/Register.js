@@ -69,83 +69,85 @@ const Register = () => {
     };
 
     return (
-        <div className="register-container">
-            <h1>Register</h1>
-            <form onSubmit={handleSubmit} className="register-form">
-                <label htmlFor="username">Username</label>
-                <input
-                    type="text"
-                    id="username"
-                    name="username"
-                    value={username}
-                    onChange={(e) => handleChange(e, 'formData')}
-                />
+        <div className="auth-container">
+            <div className="auth-card">
+                <h1>Register</h1>
+                <form onSubmit={handleSubmit} className="register-form">
+                    <label htmlFor="username">Username</label>
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        value={username}
+                        onChange={(e) => handleChange(e, 'formData')}
+                    />
 
-                <label htmlFor="email">Email</label>
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={email}
-                    onChange={(e) => handleChange(e, 'formData')}
-                />
+                    <label htmlFor="email">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={email}
+                        onChange={(e) => handleChange(e, 'formData')}
+                    />
 
-                <label htmlFor="password">Password</label>
-                <input
-                    type="password"
-                    id="password"
-                    name="password"
-                    value={password}
-                    onChange={(e) => handleChange(e, 'formData')}
-                />
+                    <label htmlFor="password">Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        value={password}
+                        onChange={(e) => handleChange(e, 'formData')}
+                    />
 
-                <label htmlFor="confirm-password">Confirm Password</label>
-                <input 
-                    type="password" 
-                    id="confirm-password" 
-                    name="confirmPassword"
-                    value={confirmPassword}
-                    onChange={(e) => handleChange(e, 'formData')}
-                />
+                    <label htmlFor="confirm-password">Confirm Password</label>
+                    <input 
+                        type="password" 
+                        id="confirm-password" 
+                        name="confirmPassword"
+                        value={confirmPassword}
+                        onChange={(e) => handleChange(e, 'formData')}
+                    />
 
-                <button type="submit">Register</button>
-            </form>
-            {showModal && (
-                <div className="modal-background">
-                    <div className="modal-content">
-                        <form
-                            onSubmit={handleModalClose}
-                            className="modal-form"
-                        >
-                            <h2>Verify Email</h2>
-                            <label htmlFor="email">Email</label>
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                value={email}
-                                onChange={(e) => handleChange(e, 'verifyFormData')}
-                            />
+                    <button type="submit">Register</button>
+                </form>
+                {showModal && (
+                    <div className="modal-background">
+                        <div className="modal-content">
+                            <form
+                                onSubmit={handleModalClose}
+                                className="modal-form"
+                            >
+                                <h2>Verify Email</h2>
+                                <label htmlFor="email">Email</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    value={email}
+                                    onChange={(e) => handleChange(e, 'verifyFormData')}
+                                />
 
-                            <label htmlFor="verification-code">
-                                Verification Code
-                            </label>
-                            <input
-                                type="text"
-                                id="verification-code"
-                                name="verificationCode"
-                                value={verificationCode}
-                                onChange={(e) => handleChange(e, 'verifyFormData')}
-                            />
+                                <label htmlFor="verification-code">
+                                    Verification Code
+                                </label>
+                                <input
+                                    type="text"
+                                    id="verification-code"
+                                    name="verificationCode"
+                                    value={verificationCode}
+                                    onChange={(e) => handleChange(e, 'verifyFormData')}
+                                />
 
-                            <div className="modal-buttons">
-                                <button type="submit">Submit</button>
-                                <button onClick={handleModalClose}>Close</button>
-                            </div>
-                        </form>
+                                <div className="modal-buttons">
+                                    <button type="submit">Submit</button>
+                                    <button onClick={handleModalClose}>Close</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                </div>
-            )}
+                )}
+            </div>
         </div>
     );
 };

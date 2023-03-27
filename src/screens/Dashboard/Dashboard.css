@@ -1,13 +1,58 @@
+/* ============ Main Dashboard area ============ */
+.dashboard-content {
+  display: grid;
+  position: relative;
+  grid-template-columns: 1.5fr 3fr;
+  background-color: #f5f5f5;
+  height: 100%;
+}
+
+.dashboard-content:nth-of-type(even) {
+  margin-top: 80px;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: top;
+  justify-content: top;
+  width: 100%;
+  height: auto;
+  top: 0;
+  background-color: #f2f2f2;
+  /* border-right: 1px solid rgba(0, 0, 0, 0.1); */
+}
+
 .container {
-  margin-top: 50px;
+  /* top: 120px; */
+  margin-top: 40px;
+  position: inherit;
+  /* background-color: red; */
+  display: grid;
+  align-self: start;
+  /* grid-template-rows: ; */
+  grid-gap: 20px;
+
+  /* width: 100%; */
+  overflow-x: hidden;
 }
 
 .card-container {
   display: flex;
+  position: relative;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  top: 0;  
+  gap: 5px;
+  height: 250px;
+  /* margin-top: 50px; */
+  margin: 0 50px;
+}
+
+.card-container .card-col {
+  height: 220px;
+  /* background-color: blue; */
 }
 
 .card-box {
@@ -15,10 +60,10 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding: 20px;
-  width: 300px;
-  height: 250px;
-  margin: 20px;
+  width: 130px;
+  height: 200px;
+  margin: 10px;
+  padding: 10px;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
@@ -32,29 +77,97 @@
 }
 
 .icon {
-  font-size: 50px;
+  font-size: 40px;
   margin-bottom: 20px;
   color: #1abc9c;
 }
 
 .card-title {
-  font-size: 25px;
-  font-weight: bold;
+  font-size: 12px;
+  /* font-weight: bold; */
   margin-bottom: 10px;
-  color: #555;
+  white-space: nowrap;
+  width: 100%;
+  color: #000;
 }
 
 .card-text {
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 26px;
+  font-weight: bold;
   color: #555;
 }
 
+/* ============ CHART STYLES ============ */
+.dashboard-stats {
+  /* background-color: #1abc9c; */
+  /* margin: 50px 40px; */
+  /* overflow-x: auto; */
+  width: 100%;
+  display: grid;
+  padding: 0px 40px;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  align-content: center;
+  justify-items: center;
+}
 
-/*  LEADERBOARD STYLES  */
-/* Add some padding and set a background color */
+
+.stats-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  align-items: center;
+  /* justify-content: center; */
+  /* position: relative; */
+  /* margin: 50px; */
+  /* width: 50%; */
+}
+
+.dashboard-stats .records-chart {
+  /* position: absolute; */
+  width: 350px;
+  height: 100%;
+  position: relative;
+  border-radius: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-stats .records-chart .recharts-surface {
+  width: 350px;
+  height: 250px;
+  /* padding: 10px; */
+  margin: 0;
+}
+
+.dashboard-stats .records-chart h2 {
+
+  font-size: 1rem;
+  font-weight: bold;
+  color: #555;
+  padding: 20px 5px;
+  text-align: center;
+  margin: 0;
+}
+
+.dashboard-stats .records-chart .recharts-wrapper {
+  width: 300px;
+  height: 200px;
+  /* padding: 10px; */
+  margin: 0;
+}
+
+
+.dashboard-stats .records-chart .recharts-wrapper .recharts-legend-wrapper {
+  display: none;
+} 
+
+
+/* ============ LEADERBOARD STYLES ============ */
 .records-container {
   padding: 20px;
+  position: relative;
+  top: 50px;
   background-color: #f5f5f5;
   /* center items */
   display: flex;
@@ -69,56 +182,121 @@
   margin-bottom: 20px;
 }
 
-.records-title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
+/* =========== Styles for user area ============ */
+.user-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-/* Style the charts */
-.records-chart {
-  margin-bottom: 30px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.1);
+.user-card {
+  width: 300px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.user-card:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.user-card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.user-card-body {
   padding: 20px;
-  width: 70%;
 }
 
-/* Style the number displayed in the first chart */
-.records-number {
-  font-size: 64px;
+.user-card-title {
+  font-size: 1.2rem;
   font-weight: bold;
-  margin-top: 10px;
   margin-bottom: 10px;
 }
 
-/* Style the legend in the bar chart */
-.recharts-legend-wrapper {
-  margin-top: 20px;
+.user-card-email {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
 }
 
-/* Style the pie chart */
-.recharts-text.recharts-pie-label-text {
-  font-size: 20px;
+.user-card-location {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.user-card-balance {
+  font-size: 1rem;
   font-weight: bold;
 }
 
-/* Style the cells in the pie chart */
-.recharts-sector {
-  cursor: pointer;
-  transition: all .3s;
-}
 
-.recharts-sector :hover {
-  filter: brightness(90%);
-}
 
-/* Style the tooltip */
-.recharts-tooltip {
-  background-color: white;
+/* ========= PENDING VERIICATIONS SECTION ======= */
+.pending-verify {
+  margin: 0 70px;
+  padding: 20px;
   border-radius: 10px;
-  box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.1);
-  padding: 10px;
-  font-size: 16px;
+  position: relative;
+  background-color: #fff;
+  /* center items */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ 
+.pending-verify__table {
+  border-collapse: collapse;
+  width: 100%;
+  padding-top: 40px;
+  border: none; /* remove table borders */
+}
+
+.pending-verify__table th {
+  padding: 20px;
+  text-align: center;
+  color: #000;
+}
+
+.pending-verify__table th:first-child {
+  text-align: left;
+}
+.pending-verify__table th:nth-child(2) {
+  text-align: right;
+}
+
+.pending-verify__row:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.pending-verify__cell {
+  border-bottom: 1px dashed #ddd; /* add dashed lines */
+  padding: 12px;
+  text-align: left;
+  font-size: 10px;
+}
+
+.pending-verify__cell:first-child {
+  width: 10%;
+  white-space: nowrap;
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+
+.pending-verify__cell:nth-child(2) {
+  width: 30%;
+  text-align: right;
+}
+
+.pending-verify__cell:last-child {
+  width: 60%;
 }

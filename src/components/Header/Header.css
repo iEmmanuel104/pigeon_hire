@@ -1,13 +1,19 @@
 /* Header styles for screens wider than 768px */
 header {
-  background-color: #282c34;
-  min-height: 10vh;
+  background-color: #ffffff;
+  /* min-height: 10vh; */
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   color: white;
-  padding: 10px;
+  padding: 0 40px;
+  border-bottom: 2px solid #181c32;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  z-index: 5;
+  top: 0;
 }
 
 .logo-container {
@@ -15,35 +21,49 @@ header {
   align-items: center;
 }
 
+.logo-container .site-name {
+  font-size: 20px;
+}
+
 .logo {
-  height: 8vmin;
+  height: 7vmin;
   pointer-events: none;
 }
 
 .site-name {
   margin-left: 10px;
+  color: #181c32;
+  font-size: 1.5rem;
 }
 
 nav {
   display: flex;
   align-items: center;
+  color: #181c32;
 }
 
 .menu {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
   list-style-type: none;
+  font-size: 12px;
   margin: 0;
   padding: 0;
 }
 
 .menu li {
+  display: inline-block;
   margin: 0 10px;
+  color: #181c32;
 }
 
 .menu li a {
-  color: white;
+  color: #181c32;
   text-decoration: none;
-  font-size: 1.5rem;
+  display: block;
+  font-size: 0.8rem;
 }
 
 .menu li a:hover {
@@ -52,8 +72,8 @@ nav {
 
 button {
   background-color: transparent;
-  border: 1px solid white;
-  color: white;
+  border: 1px solid #181c32;
+  color: #181c32;
   padding: 5px 10px;
   cursor: pointer;
 }
@@ -66,9 +86,9 @@ button:hover {
 /* Header styles for screens smaller than 768px */
 @media only screen and (max-width: 768px) {
   header {
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: flex-start;
-    padding: 10px 20px;
+    padding: 5px 20px;
   }
 
   .logo-container {
@@ -76,16 +96,15 @@ button:hover {
   }
 
   .logo {
-    height: 6vmin;
+    height: 5vmin;
   }
 
   .site-name {
-    margin-left: 0;
-    font-size: 1.5rem;
+    display: none;
   }
 
   .menu {
-    flex-direction: column;
+    /* flex-direction: column; */
     margin: 0;
     padding: 0;
   }
@@ -95,9 +114,9 @@ button:hover {
   }
 
   .menu li a {
-    color: white;
+    color: #181c32;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
   }
   
   .menu li a:hover {
@@ -105,7 +124,7 @@ button:hover {
   }
   
   button {
-    font-size: 1.2rem;
+    font-size: 1rem;
     background-color: transparent;
     border: 1px solid white;
     color: white;
